@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="CV Николай Подпрятов">
+  <meta property="og:description" content="Проекты, аналитика, операционка, e-commerce">
+  <meta property="og:image" content="URL_красивого_превью">
+  <title>CV Николай Подпрятов</title>
+  <meta name="description" content="Обо мне: product, e-com, BI-аналитика, системность, операционка." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="icon" href="./assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --bg-soft: #101720;
+      --card: rgba(18, 24, 34, 0.94);
+      --card-2: rgba(13, 19, 28, 0.82);
+      --text: #eef4ff;
+      --muted: #a8b6c9;
+      --line: rgba(255, 255, 255, 0.08);
+      --blue: #007aff;
+      --lime: #d6fb51;
+      --shadow-blue: 0 18px 50px rgba(0, 122, 255, 0.12);
+      --shadow-lime: 0 12px 36px rgba(214, 251, 81, 0.10);
+      --radius-button: 40px;
+      --radius-card: 40px;
+      --container: 1160px;
+      --header-h: 88px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(0, 122, 255, 0.13), transparent 28%),
+        radial-gradient(circle at top right, rgba(214, 251, 81, 0.08), transparent 24%),
+        linear-gradient(180deg, #091018 0%, #0b0f14 38%, #0b0f14 100%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--container));
+      margin: 0 auto;
+    }
+
+    .display-font {
+      font-family: "Russo One", "Arial Black", sans-serif;
+      letter-spacing: 0.02em;
+    }
+
+    .serif-font {
+      font-family: "Cormorant Garamond", Georgia, serif;
+    }
+
+    .muted { color: var(--muted); }
+    .accent-blue { color: var(--blue); }
+    .accent-lime { color: var(--lime); }
+
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: rgba(7, 12, 18, 0.72);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .header-inner {
+      min-height: var(--header-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 0;
+    }
+
+    .header-left,
+    .header-right,
+    .contact-links {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .avatar {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255,255,255,0.1);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+    }
+
+    .identity {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .identity .name {
+      font-size: 1.05rem;
+      line-height: 1.1;
+    }
+
+    .identity .meta {
+      font-size: 0.94rem;
+      color: var(--muted);
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      transition: color .2s ease;
+    }
+
+    .contact-link:hover { color: var(--text); }
+
+    .pill-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: var(--radius-button);
+      border: 1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      color: var(--text);
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+      white-space: nowrap;
+      color: #d6fb51;
+    }
+
+    .pill-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-blue), var(--shadow-lime);
+      border-color: rgba(255,255,255,0.16);
+      background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.05));
+    }
+
+    .pill-btn.primary {
+      background: linear-gradient(135deg, rgba(0, 122, 255, 0.2), rgba(214, 251, 81, 0.15));
+      border-color: rgba(214, 251, 81, 0.18);
+    }
+
+    main {
+      padding: 34px 0 72px;
+    }
+
+    .section + .section {
+      margin-top: 24px;
+    }
+
+    .hero-card,
+    .surface-card,
+    .case-card,
+    .accordion-item,
+    .mini-card,
+    .skills-card {
+      position: relative;
+      background: linear-gradient(180deg, rgba(16, 23, 32, 0.92), rgba(11, 16, 23, 0.92));
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+    }
+
+    .hero-card,
+    .surface-card,
+    .skills-card {
+      border-radius: var(--radius-card);
+      overflow: hidden;
+    }
+
+    .hero-card {
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1.25fr 0.9fr;
+      gap: 24px;
+      min-height: 420px;
+    }
+
+    .hero-card::before,
+    .surface-card::before,
+    .skills-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 16% 16%, rgba(0,122,255,0.12), transparent 26%),
+        radial-gradient(circle at 84% 18%, rgba(214,251,81,0.10), transparent 22%);
+      pointer-events: none;
+    }
+
+    .hero-copy,
+    .hero-side,
+    .surface-inner,
+    .skills-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 16px;
+    }
+
+    .hero-role {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(0,122,255,0.1);
+      color: #b7d9ff;
+      border: 1px solid rgba(0,122,255,0.18);
+      font-size: 0.92rem;
+    }
+
+    .hero-role.hidden { display: none; }
+
+    .hero-title {
+      margin: 0;
+      font-size: clamp(2.1rem, 4vw, 4rem);
+      line-height: 0.98;
+      max-width: 12ch;
+      text-wrap: balance;
+    }
+
+    .hero-title .accent-blue,
+    .hero-title .accent-lime {
+      display: inline-block;
+      text-shadow: 0 0 18px rgba(255,255,255,0.05);
+    }
+
+    .hero-description {
+      margin: 16px 0 0;
+      max-width: 60ch;
+      font-size: 0.94rem;
+      color: var(--muted);
+    }
+
+    .hero-points {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .point-chip,
+    .tech-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.05);
+      color: #dfe9f8;
+      font-size: 0.92rem;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 16px;
+    }
+
+    .photo-shell {
+      aspect-ratio: 1 / 1;
+      border-radius: 36px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      justify-self: end;
+      width: min(100%, 360px);
+      box-shadow: 0 20px 44px rgba(0,0,0,0.25);
+    }
+
+    .photo-shell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-note {
+      padding: 18px 20px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+      max-width: 360px;
+      justify-self: end;
+      font-size: 0.94rem;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: clamp(1.5rem, 2vw, 2.2rem);
+      line-height: 1;
+      color: #007aff;
+    }
+
+    .section-kicker {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .surface-card {
+      padding: 26px;
+    }
+
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .case-card {
+      border-radius: 40px;
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .case-card:hover,
+    .mini-card:hover,
+    .accordion-item:hover,
+    .skills-card:hover,
+    .surface-card:hover,
+    .hero-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-blue), var(--shadow-lime), 0 16px 36px rgba(0,0,0,0.18);
+      border-color: rgba(255,255,255,0.13);
+    }
+
+    .case-image {
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background: #0c1117;
+    }
+
+    .case-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s ease;
+    }
+
+    .case-card:hover .case-image img {
+      transform: scale(1.03);
+    }
+
+    .case-body {
+      padding: 18px 18px 20px;
+    }
+
+    .case-title {
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+      line-height: 1.15;
+    }
+
+    .case-flow {
+      display: grid;
+      gap: 10px;
+      margin: 0 0 16px;
+    }
+
+    .flow-line {
+      padding-left: 14px;
+      border-left: 2px solid rgba(255,255,255,0.12);
+      color: #d9e4f2;
+      font-size: 0.97rem;
+    }
+
+    .flow-line strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .case-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .mini-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.04);
+      color: var(--lime);
+      transition: color .2s ease, border-color .2s ease, background .2s ease;
+      font-size: 0.92rem;
+    }
+
+    .mini-link:hover {
+      color: var(--text);
+      border-color: rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .case-learned {
+      margin: 0;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hidden-cases {
+      margin-top: 18px;
+      display: none;
+    }
+
+    .hidden-cases.open {
+      display: block;
+      animation: reveal .35s ease;
+    }
+
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .toggle-row {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .accordion-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .accordion-item {
+      border-radius: 40px;
+      overflow: hidden;
+    }
+
+    .accordion-trigger {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      color: var(--text);
+      padding: 20px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .accordion-label {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .accordion-title {
+      font-size: 1.04rem;
+      margin: 0;
+    }
+
+    .accordion-subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .accordion-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      flex: 0 0 auto;
+      transition: transform .2s ease;
+      color: #d6fb51;
+    }
+
+    .accordion-item.open .accordion-icon {
+      transform: rotate(45deg);
+    }
+
+    .accordion-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .25s ease;
+    }
+
+    .accordion-item.open .accordion-content {
+      grid-template-rows: 1fr;
+    }
+
+    .accordion-content-inner {
+      overflow: hidden;
+    }
+
+    .accordion-content-body {
+      padding: 0 22px 22px;
+      color: #d8e2f0;
+    }
+
+    .routine-list,
+    .simple-list {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .routine-list li,
+    .simple-list li {
+      margin-top: 8px;
+    }
+
+    .skills-grid,
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .skills-card {
+      padding: 24px;
+    }
+
+    .skills-title {
+      margin: 0 0 10px;
+      font-size: 1.12rem;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .skill-badge {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #dce7f6;
+      font-size: 0.94rem;
+    }
+
+    .mini-card {
+      border-radius: 40px;
+      padding: 24px;
+    }
+
+    .mini-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.15rem;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      display: none;
+    }
+
+    .print-only {
+      display: none;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-card {
+        grid-template-columns: 1fr;
+        min-height: initial;
+      }
+
+      .hero-side,
+      .photo-shell,
+      .hero-note {
+        justify-self: start;
+      }
+
+      .cases-grid,
+      .skills-grid,
+      .about-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      :root {
+        --radius-card: 40px;
+      }
+
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .header-right {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .hero-card,
+      .surface-card,
+      .skills-card,
+      .mini-card,
+      .accordion-item {
+        border-radius: 32px;
+      }
+
+      .hero-card {
+        padding: 24px;
+      }
+
+      .photo-shell {
+        width: min(100%, 280px);
+        border-radius: 28px;
+      }
+
+      .cases-grid,
+      .skills-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .pill-btn {
+        min-height: 46px;
+      }
+    }
+
+    @media print {
+      :root {
+        --bg: #ffffff;
+        --card: #ffffff;
+        --text: #111111;
+        --muted: #4f5966;
+        --line: rgba(0,0,0,0.09);
+        --radius-card: 26px;
+      }
+
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        background: #ffffff;
+        color: #111111;
+      }
+
+      .sticky-header {
+        position: static;
+        background: #ffffff;
+        backdrop-filter: none;
+        border-bottom: 0;
+      }
+
+      .header-right .pill-btn,
+      .toggle-row,
+      .footer-note.screen-only {
+        display: none !important;
+      }
+
+      main {
+        padding: 14px 0 0;
+      }
+
+      .hero-card,
+      .surface-card,
+      .skills-card,
+      .case-card,
+      .accordion-item,
+      .mini-card {
+        box-shadow: none !important;
+        background: #ffffff !important;
+        border: 1px solid rgba(0,0,0,0.08) !important;
+        color: #111111 !important;
+      }
+
+      .hero-card::before,
+      .surface-card::before,
+      .skills-card::before {
+        display: none;
+      }
+
+      .point-chip,
+      .tech-chip,
+      .skill-badge,
+      .mini-link,
+      .hero-role,
+      .eyebrow {
+        color: #111111 !important;
+        background: #f3f5f7 !important;
+        border-color: rgba(0,0,0,0.08) !important;
+      }
+
+      .accent-blue,
+      .accent-lime {
+        color: #111111 !important;
+      }
+
+      .hidden-cases {
+        display: block !important;
+      }
+
+      .accordion-item .accordion-content {
+        grid-template-rows: 1fr !important;
+      }
+
+      .accordion-icon {
+        display: none;
+      }
+
+      .print-only {
+        display: block;
+      }
+
+      .screen-only {
+        display: none !important;
+      }
+
+      .case-card,
+      .mini-card,
+      .accordion-item,
+      .skills-card,
+      .surface-card,
+      .hero-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="sticky-header">
+    <div class="container header-inner">
+      <div class="header-left">
+        <img class="avatar" src="assets/images/CV-avatar.webp" alt="Фото профиля" />
+        <div class="identity">
+          <div class="name display-font">Николай Подпрятов</div>
+          <div class="meta">product, e-com, BI-аналитика, системность, операционка</div>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="contact-links">
+          <a class="contact-link" href="https://t.me/calevonwillow" target="_blank" rel="noreferrer noopener">Telegram</a>
+          <a class="contact-link" href="mailto:nikki.kolya@yandex.ru">Email</a>
+        </div>
+        <div class="contact-links">
+          <!-- Скачать PDF  <button class="pill-btn" type="button" data-print-btn>Скачать PDF</button> -->
+          <a class="pill-btn primary" href="https://t.me/calevonwillow" target="_blank" rel="noreferrer noopener">Написать</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="section">
+        <div class="hero-card">
+          <div class="hero-copy">
+            <h1 class="hero-title display-font">
+              Смотрю на задачи <span class="accent-blue">шире</span> и забочусь о <span class="accent-lime">результате</span>
+            </h1>
+            <p class="hero-description">
+              Улучшаю процессы, запускаю небольшие продукты и спокойно работаю там, где пересекаются бизнес, данные и польза для окружающих. Лучше всего чувствую себя, когда нужно не просто «сделать», а понять, зачем это бизнесу.
+            </p>
+            <div class="hero-points">
+              <span class="point-chip">Данные → решения</span>
+              <span class="point-chip">Системность → порядок</span>
+              <span class="point-chip">Продуктовое мышление</span>
+            </div>
+          </div>
+
+          <div class="hero-side">
+            <div class="photo-shell">
+              <img src="./assets/images/CV-avatar.webp" alt="Портрет" />
+            </div>
+            
+            <div class="hero-note">
+              <i>«Навайбкодил, но это тоже нужно уметь»</i>
+            </div>
+          
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title display-font">Кейсы</h2>
+            <p class="section-kicker">Проекты, которые запомнились больше остальных.</p>
+          </div>
+        </div>
+
+        <div class="cases-grid">
+          <article class="case-card">
+            <div class="case-image">
+              <img src="./assets/images/case_oper.webp" alt="Скрин кейса" />
+            </div>
+            <div class="case-body">
+              <h3 class="case-title display-font">Операционка в e-com</h3>
+              <div class="case-flow">
+                <div class="flow-line"><strong>Контекст:</strong> нужно было организовать работу и операционные процессы интернет-магазина, сократить расходы и выйти на прибыль.</div>
+                <div class="flow-line"><strong>Действия:</strong>
+                  <ul style="margin: 0; padding-left: 22px; color: #d6d6d6; line-height: 1.7;">
+                    <li style="margin-bottom: 10px;">Подбрал и обучил команду (склад, поддержка, продажи).</li>
+                    <li style="margin-bottom: 10px;">Построил бизнес-процессы: закупки → склад → заказы → доставка → клиентский сервис.</li>
+                    <li style="margin-bottom: 10px;">Внедрил и связал ключевые системы: ERP, CMS, CRM, e-mail маркетинг.</li>
+                    <li style="margin-bottom: 10px;">Улучшил сайт (UX/UI, конверсия, структура).</li>
+                    <li style="margin-bottom: 10px;">Автоматизировал всё, что смог (рутинные процессы и отчётность)</li>
+                    <li>Контролировал команду, маркетинговые активности, упаковку и клиентский опыт.</li>
+                  </ul>
+                </div>
+                <div class="flow-line"><strong>Результат:</strong> оно работает, при мне вышли на оборот X2 (на пике достигали 5 млн ₽/мес) и сократили расходы, перешли на прямой импорт и наладили бизнесовую часть. <br> Клиенты тоже довольны: Repeat Rate: 35%, LTV: 12 800 ₽.</div>
+              </div>
+              <div class="tech-list">
+                <span class="tech-chip">InSales</span>
+                <span class="tech-chip">Jivo</span>
+                <span class="tech-chip">Unisender</span>
+                <span class="tech-chip">МойСклад</span>
+                <span class="tech-chip">Эвотор</span>
+              </div>
+              <div class="case-links">
+                <a class="mini-link" target="_blank" href="https://harubeauty.ru/">Посмотреть сайт</a>
+              </div>
+              <p class="case-learned"><strong>Чем ценно:</strong> очень стрессовый, но самый разносторонний опыт, где всему приходилось обучаться самостоятельно, буквально с нуля. Ритейл точное не моё, но навыки бесценны.</p>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-image">
+              <img src="./assets/images/dashboard.webp" alt="Скрин кейса" />
+            </div>
+            <div class="case-body">
+              <h3 class="case-title display-font">Дашборды для e-com</h3>
+              <div class="case-flow">
+                <div class="flow-line"><strong>Контекст:</strong> CMS и ERP из коробки оказились неудобны для быстрой аналитики. Бизнесу была нужна простая и наглядная картина на лету.</div>
+                <div class="flow-line"><strong>Действия:</strong> 
+                  <ul style="margin: 0; padding-left: 22px; color: #d6d6d6; line-height: 1.7;">
+                    <li style="margin-bottom: 10px;">Продумал структуру хранения и сбора данных из InSales.</li>
+                    <li style="margin-bottom: 10px;">С помощью LLM разобрался как забирать данные по API по расписанию, как хранить в БД и как тянуть в DataLens.</li>
+                    <li>Реализовал наглядный дашборд с важными чартами для быстрой оценки состояния бизнеса.</li>
+                  </ul>
+                </div>
+                <div class="flow-line"><strong>Результат:</strong> объём ручных отчётов сократился и здоровье бизнеса стало нагляднее. Что можно оценить на дашборде: динамику продаж, эффективность маркетинговых активностей, ТОПовые продукты и категории, клиентские метрики, маржинальность с учётом всех операционных расходов и состояние складских запасов.</div>
+              </div>
+              <div class="tech-list">
+                <span class="tech-chip">API</span>
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">MySQL</span>
+                <span class="tech-chip">Yandex DataLens</span>
+                <span class="tech-chip">ChatGPT</span>
+              </div>
+
+              <p class="case-learned"><strong>Чем ценно:</strong> отличный опыт, чтобы окунуться в аналитику, исходя из личных и бизнес-потребностей, улучшив то, что предлагает рынок «из коробки». Не могу показать покликать (негласный NDA), но получился сильный рабочий инструмент.</p>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-image">
+              <img src="./assets/images/ucthu_rf.webp" alt="Скрин кейса" />
+            </div>
+            <div class="case-body">
+              <h3 class="case-title display-font">Дружеский проект — сайт</h3>
+              <div class="case-flow">
+                <div class="flow-line"><strong>Контекст:</strong> у знакомого небольшой кадастровый бизнес, нужен был современный сайт с акцентом на ценности и клиентский подход.</div>
+                <div class="flow-line"><strong>Действия:</strong>
+                  <ul style="margin: 0; padding-left: 22px; color: #d6d6d6; line-height: 1.7;">
+                    <li style="margin-bottom: 10px;">Продумал всё: от брендинга, дизайна и tone-of-voice, до структуры и текстов на каждой странице.</li>
+                    <li style="margin-bottom: 10px;">Собрал полностью самостоятельно на Tilda, но с кастомными HTML/JS/CSS-блоками и задизайнил все изображения через AI.</li>
+                    <li style="margin-bottom: 10px;">В бэк-офисе наладил аналитику и CRM, но ровно настолько, чтобы хватило для целей молодого предпринимателя.</li>
+                    <li>Периодически возвращаюсь, чтобы улучшить UX/UI.</li>
+                  </ul>
+
+                </div>
+                <div class="flow-line"><strong>Результат:</strong> у знакомого современный продающий сайт и попадание в ЦА, у меня — хороший кейс.</div>
+              </div>
+              <div class="tech-list">
+                <span class="tech-chip">HTML</span>
+                <span class="tech-chip">CSS</span>
+                <span class="tech-chip">JavaScript</span>
+                <span class="tech-chip">UI/UX</span>
+                <span class="tech-chip">Tilda</span>
+              </div>
+              <div class="case-links">
+                <a class="mini-link" target="_blank" href="https://xn--r1abbo.xn--p1ai/">Посмотреть сайт</a>
+              </div>
+              <p class="case-learned"><strong>Чем ценно:</strong> научился комплексно подходить к решению задачи, представлять готовый продукт, учитывая вайб и потребности бизнеса.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="hidden-cases" id="hiddenCases">
+          <div class="cases-grid">
+            <article class="case-card">
+              <div class="case-image">
+                <img src="./assets/images/datamatrix.webp" alt="Скрин кейса" />
+              </div>
+              <div class="case-body">
+                <h3 class="case-title display-font">Веб-приложение для DataMatrix и валидации в ЧЗ</h3>
+                <div class="case-flow">
+                  <div class="flow-line"><strong>Контекст:</strong> при работе с маркетплейсами у склада есть задача печатать дубликаты DataMatrix (маркировка Честный Знак) и клеить на упаковку. Сложность в том, чтобы корректно собрать дубль марки так, чтобы она точно проходила валидацию в ЧЗ. Рынок предлагает единичные решения только в рамках дорогих и комплексных товаро-учетных систем.</div>
+                  <div class="flow-line"><strong>Действия:</strong> 
+                    <ul style="margin: 0; padding-left: 22px; color: #d6d6d6; line-height: 1.7;">
+                      <li style="margin-bottom: 10px;">Продумал максимально простой вариант: отсканили оригинальную марку и на выходе получили точную копию, готовую для печати.</li>
+                      <li style="margin-bottom: 10px;">Изучил документацию по DataMarix именно в ЧЗ (это больно).</li>
+                      <li style="margin-bottom: 10px;">С помощью ChatGPT написал приложение — валидация не проходила.</li>
+                      <li style="margin-bottom: 10px;">Разобрался с декодированием символов и как собрать побайтово точную копию, с корректными криптохвостами и всеми нюансами.</li>
+                      <li>Добил с помощью агента Copilot до рабочего состояния и успешной проверки.</li>
+                    </ul>
+                  </div>
+                  <div class="flow-line"><strong>Результат:</strong> сэкономили на дороших решениях и получили лаконичный рабочий вариант: отсканили марку → сгенерировали PDF под печать → прошли проверку на маркетплейсах и в ЧЗ.</div>
+                </div>
+                <div class="tech-list">
+                  <span class="tech-chip">Честный Знак</span>
+                  <span class="tech-chip">DataMatrix</span>
+                  <span class="tech-chip">ZincJS</span>
+                </div>
+                <div class="case-links">
+                  <a class="mini-link" target="_blank" href="https://gs1-dm-label-58x40.vercel.app/">Посмотреть приложение</a>
+                </div>
+                <p class="case-learned"><strong>Чем ценно:</strong> тот случай, когда недостаточно кинуть промпт и получить готовое решение. Пришлось разобраться с объёмной темой маркировки и в несколько итераций добиться результата.</p>
+              </div>
+            </article>
+
+            <article class="case-card">
+              <div class="case-image">
+                <img src="./assets/images/converter.webp" alt="Скрин кейса" />
+              </div>
+              <div class="case-body">
+                <h3 class="case-title display-font">Конвертер описаний для контент-менеджера</h3>
+                <div class="case-flow">
+                  <div class="flow-line"><strong>Контекст:</strong> нужно было привести описания карточек товаров на сайте в единый брендовый вид, при этом сохранив гибкость шаблонного блока нашей CMS (текстовый редактор + HTML-редактор в бэк-офисе). Контент-менеджеры не используют HTML и ошибаются в структуре. Нужен был конвертер, который позволит собрать обычный текст менеджера в оформленный HTML для быстрой вставки в админке.</div>
+                  <div class="flow-line"><strong>Действия:</strong>
+
+                  <ul style="margin: 0; padding-left: 22px; color: #d6d6d6; line-height: 1.7;">
+                      <li style="margin-bottom: 10px;">Продумал структуру описания товара, учитывая специфику продукции.</li>
+                      <li style="margin-bottom: 10px;">Собрал универсальный HTML/CSS с лаконичными инлайн-стилями.</li>
+                      <li style="margin-bottom: 10px;">С помощью LLM написал приложение для конвертации текста в уже оформленный HTML.</li>
+                      <li>Сохранил гибкость CMS-редактора – легко правим, добавляем уникальные фишки для товара, если необходимо.</li>
+                    </ul> 
+
+                  </div>
+                  <div class="flow-line"><strong>Результат:</strong> контент-менеджер не ошибается со структурой и все карточки выглядят в единой стилистике. Менеджер заполняет пошагово необходимые секции → получает готовый HTML → при необходимости правит уже в редакторе CMS, даже не разбираясь в разметке.</div>
+                </div>
+                <div class="tech-list">
+                  <span class="tech-chip">HTML/JS/CSS</span>
+                  <span class="tech-chip">ChatGPT</span>
+                  <span class="tech-chip">Vercel</span>
+                </div>
+                <div class="case-links">
+                  <a class="mini-link" target="_blank" href="https://project-0ze1q.vercel.app/">Посмотреть конвертер</a>
+                  <a class="mini-link" target="_blank" href="https://harubeauty.ru/product/neaf-neaf-ochischayuschaya-smyvaemaya-maska-kaolin-110-gr">Пример карточки</a>
+                </div>
+                <p class="case-learned"><strong>Чем ценно:</strong> вариантов решения задачи было множество, но мне нравится полученная гибкость и сохранение условий, которые доступны «из коробки».</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="toggle-row screen-only">
+          <button class="pill-btn" type="button" id="toggleCasesBtn" aria-expanded="false">Показать ещё кейсы</button>
+        </div>
+      </section>
+
+      <!-- Задачи, которые я решаю регулярно, вода 
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title display-font">Задачи, которые я решаю регулярно</h2>
+          </div>
+        </div>
+
+        <div class="accordion-list" data-accordion-group>
+          <div class="accordion-item open">
+            <button class="accordion-trigger" type="button">
+              <span class="accordion-label">
+                <span class="accordion-title display-font">Операционка и поддержка</span>
+                <span class="accordion-subtitle">То, что держит систему в рабочем состоянии</span>
+              </span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                <div class="accordion-content-body">
+                  <ul class="routine-list">
+                    <li>Проверяю корректность данных и логику расчётов, когда что-то «поехало».</li>
+                    <li>Разбираю узкие места в процессах и устраняю трение без лишней драматизации.</li>
+                    <li>Поддерживаю инфраструктуру и слежу, чтобы решения оставались пригодными к использованию.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" type="button">
+              <span class="accordion-label">
+                <span class="accordion-title display-font">Рутина, которой я не боюсь</span>
+                <span class="accordion-subtitle">Где важны аккуратность и повторяемость</span>
+              </span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                <div class="accordion-content-body">
+                  <ul class="routine-list">
+                    <li>Сверки, уточнения, донастройка логики, доведение формулировок до рабочего состояния.</li>
+                    <li>Работа с таблицами, витринами, структурой данных и техническими деталями процесса.</li>
+                    <li>Фиксация решений и упрощение того, что раньше держалось на устных договорённостях.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger" type="button">
+              <span class="accordion-label">
+                <span class="accordion-title display-font">Системные задачи</span>
+                <span class="accordion-subtitle">Когда нужно связать людей, данные и результат</span>
+              </span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-inner">
+                <div class="accordion-content-body">
+                  <ul class="routine-list">
+                    <li>Перевожу абстрактные запросы бизнеса в конкретную структуру действий.</li>
+                    <li>Собираю решения на стыке аналитики, интерфейсов, процесса и здравого смысла.</li>
+                    <li>Отслеживаю, не ломается ли логика проекта при росте сложности.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title display-font">Skills</h2>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skills-card">
+            <div class="skills-inner">
+              <h3 class="skills-title display-font">Hard skills</h3>
+              <p class="muted">То, что смело использую в работе и что совершенствую</p>
+              <div class="skills-list">
+                <span class="skill-badge">BI / dashboards</span>
+                <span class="skill-badge">API интеграции</span>
+                <span class="skill-badge">HTML / CSS / JS</span>
+                <span class="skill-badge">LLM</span>
+                <span class="skill-badge">UI / UX</span>
+                <span class="skill-badge">Email-маркетинг</span>
+                <span class="skill-badge">Process design</span>
+                <span class="skill-badge">CRM / CMS / ERP</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="skills-card">
+            <div class="skills-inner">
+              <h3 class="skills-title display-font">Как я принимаю решения</h3>
+              <ul class="simple-list muted">
+                <li>Сначала проверяю, в чём бизнес-смысл задачи и что на самом деле нужно улучшить.</li>
+                <li>Не усложняю решение, если простая конструкция закрывает задачу надёжно.</li>
+                <li>Стараюсь видеть компромиссы заранее: скорость, ресурсы на поддержку, масштабируемость.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="skills-card">
+            <div class="skills-inner">
+              <h3 class="skills-title display-font">Как я веду проекты</h3>
+              <ul class="simple-list muted">
+                <li>Люблю понятную структуру: из хаоса делаю последовательность.</li>
+                <li>Подхватываю незавершенные проекты, если есть вектор направления и видимая польза.</li>
+                <li>Слежу, чтобы результат можно было поддерживать, а не только красиво показать.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="skills-grid" style="margin-top: 18px;">
+          <article class="skills-card">
+            <div class="skills-inner">
+              <h3 class="skills-title display-font">Как я коммуницирую</h3>
+              <ul class="simple-list muted">
+                <li>Люблю ясность: что делаем, зачем, какие ограничения и где риск.</li>
+                <li>Могу разговаривать и с бизнесом, и с технической частью.</li>
+                <li>Стараюсь писать и объяснять так, чтобы к решению можно было вернуться через месяц и всё понять.</li>
+              </ul>
+            </div>
+          </article>
+
+
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title display-font">Обо мне</h2>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <article class="mini-card">
+            <h3 class="display-font">Многозадачный</h3>
+            <p class="muted">Я не узкий специалист и привык решать разнообразные задачи: быстрее всего приношу пользу там, где нужно связать бизнес, процессы, данные и реализацию. Также всегда способен углубиться и люблю учиться новому.</p>
+          </article>
+
+          <article class="mini-card">
+            <h3 class="display-font">Я могу быть неудобным, если:</h3>
+            <ul class="simple-list muted">
+              <li>У проекта нет ощутимой пользы или понятных команде целей.</li>
+              <li>Проекту нужен суетливый экстраверт.</li>
+              <li>В проекте не приветствуются обсуждения и идеи.</li>
+            </ul>
+          </article>
+
+          <article class="mini-card">
+            <h3 class="display-font">Как я с этим работаю</h3>
+            <p class="muted">Стараюсь выявить и обозначить пользу для пользователя и бизнеса, перевожу расплывчатые идеи в конкретные шаги и главное — смотрю на задачу шире и забочусь о результате.</p>
+          </article>
+        </div>
+
+        <div class="footer-note screen-only">Увлечения можно добавить короткой строкой ниже или отдельной мини-карточкой, если они усиливают образ, а не отвлекают.</div>
+        <div class="footer-note print-only">Print-friendly версия: все важные блоки автоматически подготовлены для печати и сохранения в PDF.</div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      const roleEl = document.querySelector('[data-role]');
+      if (roleEl && !roleEl.textContent.trim()) {
+        roleEl.classList.add('hidden');
+      }
+
+      const toggleCasesBtn = document.getElementById('toggleCasesBtn');
+      const hiddenCases = document.getElementById('hiddenCases');
+
+      if (toggleCasesBtn && hiddenCases) {
+        toggleCasesBtn.addEventListener('click', () => {
+          const isOpen = hiddenCases.classList.toggle('open');
+          toggleCasesBtn.textContent = isOpen ? 'Скрыть дополнительные кейсы' : 'Показать ещё кейсы';
+          toggleCasesBtn.setAttribute('aria-expanded', String(isOpen));
+        });
+      }
+
+      document.querySelectorAll('[data-accordion-group] .accordion-item').forEach((item) => {
+        const trigger = item.querySelector('.accordion-trigger');
+        if (!trigger) return;
+
+        trigger.addEventListener('click', () => {
+          item.classList.toggle('open');
+        });
+      });
+
+      document.querySelectorAll('[data-print-btn]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          window.print();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
